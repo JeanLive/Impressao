@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phonegap/phonegap-plugin-barcodescanner.git"
+    "url": "git+https://github.com/JeanLive/Impressao.git"
   },
   "keywords": [
     "ecosystem:cordova",
