@@ -748,7 +748,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
-          objeto.fecharComunicacao();
+          //objeto.fecharComunicacao();
             
         }
     
