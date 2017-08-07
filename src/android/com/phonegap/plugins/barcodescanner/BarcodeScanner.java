@@ -972,7 +972,9 @@ Date dat= new Date();
     //}
   }
 	// TIPO DE IMPRESSAO REDE OU BLUETOOTH		 
-    }else{
+    }
+    
+    if(TIPO_IMPRESSAO.equals("Bluetooth")){
         
         if(TIPO.equals("CANC")){
             		// Pega a hora
