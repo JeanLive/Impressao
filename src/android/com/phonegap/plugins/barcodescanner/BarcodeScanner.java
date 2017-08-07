@@ -970,8 +970,7 @@ Date dat= new Date();
   }
 }
     
-    }else{
-    //if(IMPRESSAO_TIPO.equals("Bluetooth")){
+    if(IMPRESSAO_TIPO.equals("Bluetooth")){
         if(TIPO.equals("CANC")){
             		// Pega a hora
 Date dat= new Date();
