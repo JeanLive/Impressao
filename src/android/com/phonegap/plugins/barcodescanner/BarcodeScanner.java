@@ -653,8 +653,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                  .inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                  //.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
