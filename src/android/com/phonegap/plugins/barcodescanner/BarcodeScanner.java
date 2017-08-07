@@ -446,7 +446,7 @@ public void live(JSONArray args){
                     }
     
     
-    if(TIPO_IMPRESSAO.equals("Rede")){
+    //if(TIPO_IMPRESSAO.equals("Rede")){
     
     if(TIPO.equals("CANC")){
             		// Pega a hora
@@ -972,9 +972,9 @@ Date dat= new Date();
     //}
   }
 	// TIPO DE IMPRESSAO REDE OU BLUETOOTH		 
-    }
+    //}
     
-    if(TIPO_IMPRESSAO.equals("Bluetooth")){
+    /*if(TIPO_IMPRESSAO.equals("Bluetooth")){
         
         if(TIPO.equals("CANC")){
             		// Pega a hora
@@ -1504,7 +1504,7 @@ Date dat= new Date();
   }
 	        
         
-    }
+    }*/
 
 		}
 }
