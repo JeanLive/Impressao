@@ -83,7 +83,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String TESTE1;
     String TESTE2;
     String TESTE3;
-    String IP;
+    String IP = "";
     String PORTA;
     String IMPRESSAO_TIPO;
        
