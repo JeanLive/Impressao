@@ -969,6 +969,537 @@ Date dat= new Date();
   
   }
 }
+    
+    if(IMPRESSAO_TIPO.equals("Bluetooth")){
+        if(TIPO.equals("CANC")){
+            		// Pega a hora
+Date dat= new Date();
+//http://www.technotalkative.com/android-json-parsing/
+
+        char[] chrRetorno = new char[1164];
+    	DarumaMobile objeto = DarumaMobile
+				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
+		//TextView versao = (TextView) findViewById(R.id.textView1);
+		//versao.setText(String.valueOf(obj.retornaVersao()));
+    
+			objeto.iniciarComunicacao();
+			
+
+			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)
+                    + ((char) 0x0A)
+                    + ((char) 0x13) + "CNPJ"             
+                    + ((char) 0x3A)             
+                    + ((char) 0x13) + CNPJ
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + "IE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + INSCR_ESTADUAL            
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + LOGRADOURO
+                    + ((char) 0x2C)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + NUMERO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)             
+                    + ((char) 0x12) + BAIRRO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + MUNICIPIO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + UF
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)
+                    + ((char) 0x12) + "FONE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + TELEFONE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NÚMERO"
+                    + ((char) 0x3A)
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + NUM_CUPOM             
+                    + ((char) 0x13) + " " + ((char) 0x09) + "DATA"
+                    + ((char) 0x3A)
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + LIVE_DATA
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "PEDIDO CANCELADO" + ((char) 0x1B) + "" + ((char) 0x46)            
+					+ ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "------------------------------------------------"
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x0A)
+                    + "------------------------------------------------"
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + VENDA_ITENS             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "                        " + QUANTIDADE
+                    + ((char) 0x0A)             
+                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                           " + LIVE_TOTAL_ITENS
+                    + ((char) 0x0A)            
+                    + "Desconto R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                              " + LIVE_PAGAMENTO_DESC
+                    + ((char) 0x0A)
+                    + "Acrescimo R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                             " + LIVE_PAGAMENTO_ACRES
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    + ((char) 0x0A)             
+                    + ((char) 0x13) + VENDA_PAGAMENTO
+                    + ((char) 0x0A)             
+                    + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE"
+                    + ((char) 0x3A)
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA
+                    + ((char) 0x0A) + "" + ((char) 0x0A)                          
+                    + ((char) 0x09)
+					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6d));             
+                    //+ ((char) 0x0A));
+          //objeto.fecharComunicacao();
+            
+        }
+    
+    if(TIPO.equals("I")){
+            		// Pega a hora
+Date dat= new Date();
+//http://www.technotalkative.com/android-json-parsing/
+
+        char[] chrRetorno = new char[1164];
+    	DarumaMobile objeto = DarumaMobile
+				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
+		//TextView versao = (TextView) findViewById(R.id.textView1);
+		//versao.setText(String.valueOf(obj.retornaVersao()));
+    
+			objeto.iniciarComunicacao();
+			
+
+			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)
+                    + ((char) 0x0A)
+                    + ((char) 0x13) + "CNPJ"             
+                    + ((char) 0x3A)             
+                    + ((char) 0x13) + CNPJ
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + "IE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + INSCR_ESTADUAL            
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + LOGRADOURO
+                    + ((char) 0x2C)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + NUMERO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)             
+                    + ((char) 0x12) + BAIRRO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + MUNICIPIO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + UF
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)
+                    + ((char) 0x12) + "FONE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + TELEFONE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "MESA:" + MESA + ((char) 0x20) + ((char) 0x20)
+                    + "DATA: " + LIVE_DATA + ((char) 0x20) + LIVE_HORA
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + ((char) 0x1B) + "" + ((char) 0x45) + "COMANDA: " + PRODUTO_ID + ((char) 0x1B) + "" + ((char) 0x46)               
+					+ ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "DESCRIÇÃO: " + LIVE_ITENS_DESCRICAO            
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OBSERVAÇÃO: " + LIVE_OBSERVACAO                         
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "QUANTIDADE: " + LIVE_ITENS_QUANTIDADE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)                         
+                    + ((char) 0x0A) + "" + ((char) 0x0A)                         
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x09)
+					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6d));             
+                    //+ ((char) 0x0A));
+          //objeto.fecharComunicacao();
+    }
+    
+    if(TIPO.equals("V") && TIPO_PDV.equals("Nao Fiscal")){
+            		// Pega a hora
+Date dat= new Date();
+//http://www.technotalkative.com/android-json-parsing/
+
+        char[] chrRetorno = new char[1164];
+    	DarumaMobile objeto = DarumaMobile
+				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                  //.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
+		//TextView versao = (TextView) findViewById(R.id.textView1);
+		//versao.setText(String.valueOf(obj.retornaVersao()));
+    
+			objeto.iniciarComunicacao();
+			
+
+			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)
+                    + ((char) 0x0A)
+                    + ((char) 0x13) + "CNPJ"             
+                    + ((char) 0x3A)             
+                    + ((char) 0x13) + CNPJ
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + "IE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + INSCR_ESTADUAL            
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + LOGRADOURO
+                    + ((char) 0x2C)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + NUMERO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)             
+                    + ((char) 0x12) + BAIRRO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + MUNICIPIO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + UF
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)
+                    + ((char) 0x12) + "FONE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + TELEFONE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NÚMERO" + ((char) 0x3A) + NUM_CUPOM
+                    + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
+                    + ((char) 0x20)             
+                    + LIVE_HORA
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "PEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
+					+ ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "------------------------------------------------"
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x0A)
+                    + "------------------------------------------------"
+                    + ((char) 0x0A)             
+                    + ((char) 0x12) + VENDA_ITENS             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "                        " + QUANTIDADE
+                    + ((char) 0x0A)             
+                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                           " + LIVE_TOTAL_ITENS
+                    + ((char) 0x0A)            
+                    + "Desconto R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                              " + LIVE_PAGAMENTO_DESC
+                    + ((char) 0x0A)
+                    + "Acrescimo R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                             " + LIVE_PAGAMENTO_ACRES             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    + ((char) 0x0A)             
+                    + ((char) 0x13) + VENDA_PAGAMENTO
+                    + ((char) 0x0A)             
+                    + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x09)
+					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6d));             
+                    //+ ((char) 0x0A));
+          //objeto.fecharComunicacao();
+            
+        }
+    
+    if(TIPO.equals("V") && TIPO_PDV.equals("Fiscal")){
+            		// Pega a hora
+Date dat= new Date();
+//http://www.technotalkative.com/android-json-parsing/
+
+        char[] chrRetorno = new char[1164];
+    	DarumaMobile objeto = DarumaMobile
+				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
+		//TextView versao = (TextView) findViewById(R.id.textView1);
+		//versao.setText(String.valueOf(obj.retornaVersao()));
+    
+			objeto.iniciarComunicacao();
+			
+
+			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + ((char) 0x07)
+                    + ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x13) + "CNPJ" + ((char) 0x1B) + "" + ((char) 0x6A) + "1"             
+                    + ((char) 0x3A)
+                    + ((char) 0x13) + CNPJ + ((char) 0x20)
+                    + ((char) 0x13) + "IE" + ((char) 0x1B) + "" + ((char) 0x6A) + "1"             
+                    + ((char) 0x3A)
+                    + ((char) 0x13) + INSCR_ESTADUAL
+                    + ((char) 0x0A)             
+					+ ((char) 0x0E) + "" + ((char) 0x14) + ((char) 0x1B) + "" + ((char) 0x45) + LIVE_RAZAO_SOCIAL + ((char) 0x1B) + "" + ((char) 0x46)              
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + LOGRADOURO
+                    + ((char) 0x2C)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + NUMERO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)             
+                    + ((char) 0x12) + BAIRRO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + MUNICIPIO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + UF
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)
+                    + ((char) 0x12) + "FONE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + TELEFONE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + "------------------------------------------------" 
+                    + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Documento Auxiliar da Nota Fiscal de Consumidor Eletrônica" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)           
+                    + "------------------------------------------------"            
+                    + ((char) 0x0A)            
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + VENDA_ITENS             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "                        " + QUANTIDADE             
+                    + ((char) 0x0A)             
+                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "                           " + LIVE_TOTAL_ITENS
+                    + ((char) 0x0A)             
+                    + ACRES_DESC             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Valor a Pagar R$                         " + VLR_RECEBER + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  
+                    + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    + ((char) 0x0A)             
+                    + ((char) 0x13) + VENDA_PAGAMENTO
+                    + ((char) 0x0A)
+                    + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + ((char) 0x1B) + "" + ((char) 0x45) + "Consulte pela Chave de Acesso em" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + URL_CONSULTA
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + CHAVE_ACESSO          
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + CONSUMIDOR + "" + ((char) 0x1B) + "" + ((char) 0x46) + CLIENTE + ((char) 0x1B) + "" + ((char) 0x6A) + "1"                                     
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Protocolo de autorização:" + ((char) 0x1B) + "" + ((char) 0x46) +  PROTOCOLO + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Data da autorização" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x20) + DATA_HORA_AUTORIZACAO + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A) + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + montarQrCode(LIVE_QRCODE, "H", "4")
+                    + ((char) 0x0A)             
+                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
+                    + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "Tributos Totais Incidentes (Lei Federal 12.741/2012) R$: " + LIVE_TOTAL_TRIBUTOS
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Operador"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x09)
+					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6d));             
+                    //+ ((char) 0x0A));
+          //objeto.fecharComunicacao();
+            
+        }
+        
+  if(TIPO.equals("C")){        
+            		// Pega a hora
+Date dat= new Date();
+//http://www.technotalkative.com/android-json-parsing/
+
+        char[] chrRetorno = new char[1164];
+    	DarumaMobile objeto = DarumaMobile
+				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
+		//TextView versao = (TextView) findViewById(R.id.textView1);
+		//versao.setText(String.valueOf(obj.retornaVersao()));
+    
+			objeto.iniciarComunicacao();
+			
+
+			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A)
+                    + ((char) 0x0A)
+                    + ((char) 0x13) + "CNPJ"             
+                    + ((char) 0x3A)             
+                    + ((char) 0x13) + CNPJ
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + "IE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + INSCR_ESTADUAL            
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + LOGRADOURO
+                    + ((char) 0x2C)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + NUMERO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)             
+                    + ((char) 0x12) + BAIRRO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + MUNICIPIO
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)             
+                    + ((char) 0x12) + UF
+                    + ((char) 0x20)             
+                    + ((char) 0x2D)
+                    + ((char) 0x20)
+                    + ((char) 0x12) + "FONE"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + TELEFONE
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "MESA"
+                    + ((char) 0x3A) + ((char) 0x20) + MESA             
+                    + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
+                    + ((char) 0x20) + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "CONFERÊNCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
+					+ ((char) 0x0A) + "" + ((char) 0x0A)
+                    + "------------------------------------------------"
+                    + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x0A)
+                    + "------------------------------------------------"             
+                    + ((char) 0x0A)
+                    + ((char) 0x12) + VENDA_ITENS             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)               
+                    + "subtotal - R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + ((char) 0x3A)            
+                    + "                            " + TOTAL_ITENS
+                    + ((char) 0x0A)
+                    + "Total por ocupante - R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + ((char) 0x3A)            
+                    + "                  " + OCUPANTE             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM             
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
+                    + ((char) 0x3A)             
+                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x09)
+					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0A));
+          //objeto.fecharComunicacao();
+  
+  }
+        
+        
+    }
 	
 		}
 }
