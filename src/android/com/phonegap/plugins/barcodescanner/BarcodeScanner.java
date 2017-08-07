@@ -85,6 +85,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String TESTE3;
     String IP;
     String PORTA;
+    String IMPRESSAO_TIPO;
        
     private static final String DATA = "data";
     private static final String TYPE = "type";
@@ -357,10 +358,10 @@ public void live(JSONArray args){
                     LIVE_TOTAL_TRIBUTOS = object.getJSONObject(i).getString("live_tributos").toString();
                     LIVE_QRCODE = object.getJSONObject(i).getString("live_qrcode").toString();
                     URL_CONSULTA = object.getJSONObject(i).getString("live_url_consulta").toString();
+                    IMPRESSAO_TIPO = object.getJSONObject(i).getString("live_tipo_impressao").toString();
                     IP = object.getJSONObject(i).getString("impressora_ip").toString();
                     PORTA = object.getJSONObject(i).getString("impressora_porta").toString();
-                                        
-                    
+                     
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
                         
@@ -443,7 +444,8 @@ public void live(JSONArray args){
             }
                     }
 
-    
+    if(IMPRESSAO_TIPO.equals("Rede")){
+        
     if(TIPO.equals("CANC")){
             		// Pega a hora
 Date dat= new Date();
@@ -966,6 +968,7 @@ Date dat= new Date();
           objeto.fecharComunicacao();
   
   }
+}
 	
 		}
 }
