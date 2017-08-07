@@ -85,8 +85,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String TESTE3;
     String IP;
     String PORTA;
-    //String TIPO_IMPRESSAO;
-    
+       
     private static final String DATA = "data";
     private static final String TYPE = "type";
     private static final String SCAN_INTENT = "com.google.zxing.client.android.SCAN";
@@ -360,8 +359,7 @@ public void live(JSONArray args){
                     URL_CONSULTA = object.getJSONObject(i).getString("live_url_consulta").toString();
                     IP = object.getJSONObject(i).getString("impressora_ip").toString();
                     PORTA = object.getJSONObject(i).getString("impressora_porta").toString();
-                    //TIPO_IMPRESSAO = object.getJSONObject(i).getString("live_tipo_impressao").toString();
-                    
+                                        
                     
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
@@ -444,9 +442,7 @@ public void live(JSONArray args){
 
             }
                     }
-    
-    
-    //if(TIPO_IMPRESSAO.equals("Rede")){
+
     
     if(TIPO.equals("CANC")){
             		// Pega a hora
