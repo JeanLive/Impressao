@@ -444,7 +444,7 @@ public void live(JSONArray args){
             }
                     }
 
-    if(IMPRESSAO_TIPO.equals("Rede")){
+    //if(IMPRESSAO_TIPO.equals("Rede")){
         
     if(TIPO.equals("CANC")){
             		// Pega a hora
@@ -968,9 +968,10 @@ Date dat= new Date();
           objeto.fecharComunicacao();
   
   }
-}
+//}
     
-    if(IMPRESSAO_TIPO.equals("Bluetooth")){
+    /*if(IMPRESSAO_TIPO.equals("Bluetooth")){
+        
         if(TIPO.equals("CANC")){
             		// Pega a hora
 Date dat= new Date();
@@ -1499,7 +1500,7 @@ Date dat= new Date();
   }
         
         
-    }
+    }*/
 	
 		}
 }
