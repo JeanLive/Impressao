@@ -83,7 +83,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String TESTE1;
     String TESTE2;
     String TESTE3;
-    String IP = "";
+    String IP;
     String PORTA;
     String IMPRESSAO_TIPO;
        
@@ -979,7 +979,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1100,7 +1101,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1178,7 +1180,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
                   //.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
@@ -1292,7 +1295,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1406,7 +1410,8 @@ Date dat= new Date();
         char[] chrRetorno = new char[1164];
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
