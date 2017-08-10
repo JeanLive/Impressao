@@ -87,6 +87,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String IP;
     String PORTA;
     String IMPRESSAO_TIPO;
+    String BLOCO;
        
     private static final String DATA = "data";
     private static final String TYPE = "type";
@@ -1189,9 +1190,8 @@ Date dat= new Date();
 		//versao.setText(String.valueOf(obj.retornaVersao()));
     
 			objeto.iniciarComunicacao();
-			
-
-			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
+        
+            BLOCO = "" + ((char) 0x1B) + "@" + ((char) 0x1B)
 					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
 					+ ((char) 0x0E) + "" + ((char) 0x14) + ((char) 0x09) + ((char) 0x09) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A)
@@ -1233,7 +1233,7 @@ Date dat= new Date();
                     + ((char) 0x20)             
                     + LIVE_HORA
                     + ((char) 0x0A) + "" + ((char) 0x0A)     
-                    + ((char) 0x09) + ((char) 0x09) + ((char) 0x09)                          
+                    + ((char) 0x09) + ((char) 0x09) + "    "                          
                     + ((char) 0x1B) + "" + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
@@ -1283,7 +1283,10 @@ Date dat= new Date();
                     + ((char) 0x09)
 					/*+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" */+ ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6d));             
+                    + ((char) 0x1B) + "" + ((char) 0x6d)
+			
+
+			objeto.enviarComando(BLOCO);             
                     //+ ((char) 0x0A));
           //objeto.fecharComunicacao();
             
