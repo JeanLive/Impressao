@@ -1239,7 +1239,7 @@ Date dat= new Date();
                     + ((char) 0x0A)             
                     /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "Codigo" + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
                     + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "QQtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "QQtde UN" + ((char) 0x20) + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
@@ -1271,7 +1271,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B)+"a0" 
                     + ((char) 0x0A) + "" + ((char) 0x0A)            
-                    + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
+                    + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0" + ((char) 0x0A)           
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
