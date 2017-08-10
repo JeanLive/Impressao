@@ -1231,8 +1231,9 @@ Date dat= new Date();
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20)             
                     + LIVE_HORA
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "PEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)     
+                    + ((char) 0x09)             
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
@@ -1270,8 +1271,9 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x09)                
                     + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
+                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x09)             
+                    /*+ ((char) 0x0E) + "" + ((char) 0x14) */+ MENSAGEM            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
