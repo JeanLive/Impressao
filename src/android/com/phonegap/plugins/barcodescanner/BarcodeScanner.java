@@ -1250,13 +1250,13 @@ Date dat= new Date();
                     + "Qtde. total de itens:"//+ ((char) 0x1B) + "" + ((char) 0x6A) + "0"
                     + "                        " + QUANTIDADE
                     + ((char) 0x0A)             
-                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Valor total R$" //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
                     + "                           " + LIVE_TOTAL_ITENS
                     + ((char) 0x0A)            
-                    + "Desconto R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Desconto R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
                     + "                              " + LIVE_PAGAMENTO_DESC
                     + ((char) 0x0A)
-                    + "Acrescimo R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Acrescimo R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
                     + "                             " + LIVE_PAGAMENTO_ACRES             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
