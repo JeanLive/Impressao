@@ -57,6 +57,7 @@ public class BarcodeScanner extends CordovaPlugin {
     String LIVE_PAGAMENTO_TROCO;
     String ITENS;
     String VENDA_ITENS;
+    String VENDA_ITENS_BLUETOOTH;
     String VENDA_PAGAMENTO;
     String TIPO;
     String MESA;
@@ -390,7 +391,7 @@ public void live(JSONArray args){
                     OCUPANTE = itens.getJSONObject(y).getString("vlr_ocupante").toString();
                     QUANTIDADE = itens.getJSONObject(y).getString("quan_itens").toString();
                     LIVE_OBSERVACAO = itens.getJSONObject(y).getString("live_observacao").toString();    
-                        
+                    VENDA_ITENS_BLUETOOTH    
                     //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" + String.format("%03d", SEQ)    
                     VENDA_ITENS+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_ITENS_PRODUTOID 
                     + "" +((char) 0x20) +((char) 0x20) 
@@ -1192,7 +1193,7 @@ Date dat= new Date();
 
 			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
 					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
-					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + ((char) 0x09) + ((char) 0x09) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A)
                     + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
@@ -1227,17 +1228,17 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NUMERO" + ((char) 0x3A) + NUM_CUPOM
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "NUMERO" + ((char) 0x3A) + NUM_CUPOM
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20)             
                     + LIVE_HORA
                     + ((char) 0x0A) + "" + ((char) 0x0A)     
-                    + ((char) 0x09) + ((char) 0x09)             
+                    + ((char) 0x09) + ((char) 0x09) + ((char) 0x09)                          
                     + ((char) 0x1B) + "" + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "CCodigo" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "Codigo" + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
                     + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x1B) + "" + ((char) 0x45) + "QQtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
