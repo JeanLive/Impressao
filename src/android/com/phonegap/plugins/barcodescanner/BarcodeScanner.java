@@ -1265,19 +1265,19 @@ Date dat= new Date();
                     + ((char) 0x0A)             
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE "
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE: "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "NAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR:" + "" + USUARIO
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA             
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x09)
-					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+					/*+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" */+ ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
