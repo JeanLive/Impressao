@@ -1259,13 +1259,13 @@ Date dat= new Date();
                     + "Acrescimo R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
                     + "                             " + LIVE_PAGAMENTO_ACRES             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
-                    + ((char) 0x13) + VENDA_PAGAMENTO
+                    /*+ ((char) 0x13) */+ VENDA_PAGAMENTO
                     + ((char) 0x0A)             
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "NAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
