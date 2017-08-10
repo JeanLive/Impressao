@@ -1267,7 +1267,8 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE: "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x09)                
                     + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
