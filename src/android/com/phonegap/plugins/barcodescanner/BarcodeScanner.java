@@ -1227,7 +1227,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NÚMERO" + ((char) 0x3A) + NUM_CUPOM
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NUMERO" + ((char) 0x3A) + NUM_CUPOM
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20)             
                     + LIVE_HORA
@@ -1236,8 +1236,8 @@ Date dat= new Date();
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Codigo" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
@@ -1268,13 +1268,11 @@ Date dat= new Date();
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
-                    + ((char) 0x3A)             
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
