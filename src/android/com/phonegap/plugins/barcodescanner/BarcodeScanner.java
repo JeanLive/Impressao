@@ -1247,7 +1247,7 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "Qtde. total de itens:"//+ ((char) 0x1B) + "" + ((char) 0x6A) + "0"
                     + "                        " + QUANTIDADE
                     + ((char) 0x0A)             
                     + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
