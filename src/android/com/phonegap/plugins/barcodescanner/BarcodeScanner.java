@@ -1232,16 +1232,16 @@ Date dat= new Date();
                     + ((char) 0x20)             
                     + LIVE_HORA
                     + ((char) 0x0A) + "" + ((char) 0x0A)     
-                    + ((char) 0x09)             
+                    + ((char) 0x09) + ((char) 0x09)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + "" + ((char) 0x46)            
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Codigo" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "CCodigo" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "QQtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
