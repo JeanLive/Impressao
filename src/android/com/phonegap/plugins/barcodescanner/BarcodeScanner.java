@@ -391,7 +391,7 @@ public void live(JSONArray args){
                     OCUPANTE = itens.getJSONObject(y).getString("vlr_ocupante").toString();
                     QUANTIDADE = itens.getJSONObject(y).getString("quan_itens").toString();
                     LIVE_OBSERVACAO = itens.getJSONObject(y).getString("live_observacao").toString();    
-                    VENDA_ITENS_BLUETOOTH    
+                       
                     //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" + String.format("%03d", SEQ)    
                     VENDA_ITENS+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_ITENS_PRODUTOID 
                     + "" +((char) 0x20) +((char) 0x20) 
