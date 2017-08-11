@@ -1060,18 +1060,16 @@ Date dat= new Date();
                     + "                            " + LIVE_PAGAMENTO_ACRES
                     + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x0A)             
-                    + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x0A)
                     + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
                     + ((char) 0x13) + VENDA_PAGAMENTO
                     + ((char) 0x0A)             
                     + ((char) 0x13) + "TROCO R$:" + "                                " + LIVE_PAGAMENTO_TROCO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + "CLIENTE"
-                    + ((char) 0x3A)
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + "CLIENTE: "
+                    + ((char) 0x1B)+"a1" + CLIENTE              
+                    + ((char) 0x0A) + "" + ((char) 0x0A)            
                     + ((char) 0x1B)+"a1" + "NAO CONTEM VALOR FISCAL!" 
                     + ((char) 0x0A) + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM     
@@ -1261,7 +1259,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + "CLIENTE: "
                     + ((char) 0x1B)+"a1" + CLIENTE             
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
+                    + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A)               
                     + ((char) 0x1B)+"a1" + "NAO CONTEM VALOR FISCAL!" 
                     + ((char) 0x0A) + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM     
