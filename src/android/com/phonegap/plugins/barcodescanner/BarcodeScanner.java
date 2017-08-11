@@ -397,12 +397,13 @@ public void live(JSONArray args){
                     VENDA_ITENS+= ((char) 0x1B)+"a3"+ LIVE_ITENS_PRODUTOID 
                     + "" +((char) 0x20) +((char) 0x20) 
                     + "" + LIVE_ITENS_DESCRICAO 
-                    + ((char) 0x0A) 
-                    ((char) 0x1B)+"a2" 
+                    + ((char) 0x0A)
+                    + ((char) 0x1B)+"a2" 
                     + "" + LIVE_ITENS_QUANTIDADE 
                     + "" + ((char) 0x20) + "" + ((char) 0x20) 
                     + "" + LIVE_ITENS_UNIDADE + ((char) 0x20) + ((char) 0x20) 
-                    + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL + ((char) 0x0A)
+                    + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL 
+                    + ((char) 0x0A)
                     SEQ++;
                     };
                    
