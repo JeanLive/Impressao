@@ -994,7 +994,7 @@ Date dat= new Date();
 			objeto.enviarComando(+ ((char) 0x1B) + "@"
                     + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
-                    + ((char) 0x0A)
+                    + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
                     + ((char) 0x3A)             
                     + ((char) 0x13) + CNPJ
@@ -1027,17 +1027,13 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NUMERO"
-                    + ((char) 0x3A)
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + NUM_CUPOM             
-                    + ((char) 0x13) + " " + ((char) 0x09) + "DATA"
-                    + ((char) 0x3A)
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + LIVE_DATA
+                    + "NUMERO:" + NUM_CUPOM             
+                    + ((char) 0x13) + ((char) 0x20) + ((char) 0x20) + ((char) 0x09) + "DATA:" + LIVE_DATA
                     + ((char) 0x20)             
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x0A) + ((char) 0x0A)             
                     + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "PPEDIDO CANCELADO" + ((char) 0x1B) + "" + ((char) 0x46)            
-					+ ((char) 0x0A) + "" + ((char) 0x0A)
+					+ ((char) 0x0A) + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
                     + "Codigo" + ((char) 0x20)
@@ -1051,32 +1047,32 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
-                    + "                        " + QUANTIDADE
+                    + ((char) 0x1B)+"a0" + "Qtde. total de itens:"
+                    + "                       " + QUANTIDADE
                     + ((char) 0x0A)             
-                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
-                    + "                           " + LIVE_TOTAL_ITENS
+                    + "Valor total R$:"            
+                    + "                          " + LIVE_TOTAL_ITENS
                     + ((char) 0x0A)            
-                    + "Desconto R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
-                    + "                              " + LIVE_PAGAMENTO_DESC
+                    + "Desconto R$:"         
+                    + "                             " + LIVE_PAGAMENTO_DESC
                     + ((char) 0x0A)
-                    + "Acrescimo R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Acrescimo R$:"           
                     + "                             " + LIVE_PAGAMENTO_ACRES
                     + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
                     + ((char) 0x13) + VENDA_PAGAMENTO
                     + ((char) 0x0A)             
-                    + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO
+                    + ((char) 0x13) + "TROCO R$:" + "                                " + LIVE_PAGAMENTO_TROCO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE"
+                    + "CLIENTE:"
                     + ((char) 0x3A)
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
@@ -1087,7 +1083,7 @@ Date dat= new Date();
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA
                     + ((char) 0x0A) + "" + ((char) 0x0A)                          
                     + ((char) 0x09)
-					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
