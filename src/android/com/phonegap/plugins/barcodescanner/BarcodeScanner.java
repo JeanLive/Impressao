@@ -367,7 +367,7 @@ public void live(JSONArray args){
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
                         
-                    COMANDA+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Comanda: " + PRODUTO_ID + ((char) 0x0A);
+                    COMANDA+=+ ((char) 0x1B)+"a0"+ "Comanda: " + PRODUTO_ID + ((char) 0x0A);
                     }else{
                     COMANDA="";    
                     }
@@ -1079,7 +1079,7 @@ Date dat= new Date();
                     + COMANDA
                     + ((char) 0x0A) + "" + ((char) 0x0A)                          
 					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
           //objeto.fecharComunicacao();
@@ -1151,7 +1151,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "QUANTIDADE: " + LIVE_ITENS_QUANTIDADE
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)                         
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)                         
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
                     + ((char) 0x3A)             
