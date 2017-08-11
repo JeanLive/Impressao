@@ -420,7 +420,7 @@ public void live(JSONArray args){
                     VLR_RECEBER = moeda.getJSONObject(x).getString("vlr_apagar").toString();    
                     LIVE_PAGAMENTO_TROCO = moeda.getJSONObject(x).getString("pag_troco").toString();
                       
-                   VENDA_PAGAMENTO+= ((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_PAGAMENTO_MOEDA +"                         "+ LIVE_PAGAMENTO_RECEBIDO
+                   VENDA_PAGAMENTO+= ((char) 0x1B)+"a0"+ LIVE_PAGAMENTO_MOEDA +"                         "+ LIVE_PAGAMENTO_RECEBIDO
                     + ((char) 0x0A);
                                     
                     };
@@ -1270,15 +1270,15 @@ Date dat= new Date();
                     + "CLIENTE: "
                     + ((char) 0x1B)+"a1" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
-                    + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B)+"a0" 
-                    + ((char) 0x0A) + "" + ((char) 0x0A)            
-                    + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
+                    + ((char) 0x1B)+"a1" + "NAO CONTEM VALOR FISCAL!" 
+                    + ((char) 0x0A) + ((char) 0x0A)            
+                    + ((char) 0x1B) +"a1" + MENSAGEM     
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
                     + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B)+"a1"+  ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d);
 			
