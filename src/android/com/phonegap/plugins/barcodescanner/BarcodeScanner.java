@@ -367,7 +367,7 @@ public void live(JSONArray args){
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
                         
-                    COMANDA+=+ ((char) 0x1B)+"a0"+ "Comanda: " + PRODUTO_ID + ((char) 0x0A);
+                    COMANDA+=((char) 0x1B)+"a0"+ "Comanda: " + PRODUTO_ID + ((char) 0x0A);
                     }else{
                     COMANDA="";    
                     }
@@ -1288,7 +1288,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                 //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1403,7 +1403,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1411,11 +1411,10 @@ Date dat= new Date();
 			objeto.iniciarComunicacao();
 			
 
-			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
-					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
-					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+			objeto.enviarComando(+ ((char) 0x1B) + "@"
                     + ((char) 0x0A)
-                    + ((char) 0x0A)
+                    + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
+                    + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
                     + ((char) 0x3A)             
                     + ((char) 0x13) + CNPJ
@@ -1453,15 +1452,15 @@ Date dat= new Date();
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20) + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "CONFERÊNCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "CONFERENCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + "Codigo" + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + "Qtde UN" + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
                     + "------------------------------------------------"             
                     + ((char) 0x0A)
@@ -1479,7 +1478,7 @@ Date dat= new Date();
                     + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTÉM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
@@ -1488,7 +1487,7 @@ Date dat= new Date();
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x09)
-					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0A));
           //objeto.fecharComunicacao();
