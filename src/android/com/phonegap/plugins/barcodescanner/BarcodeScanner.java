@@ -1191,7 +1191,7 @@ Date dat= new Date();
     
 			objeto.iniciarComunicacao();
         
-            texto = ((char) 0x1B)+"@"+((char) 0x1D)+((char) 0x68)+((char) 0x50)+			//Inicialização da Impressora com Configuração de altura do código de barras
+            testeteste = ((char) 0x1B)+"@"+((char) 0x1D)+((char) 0x68)+((char) 0x50)+			//Inicialização da Impressora com Configuração de altura do código de barras
 
                             "------------------------------------------------\n" +
 
@@ -1323,7 +1323,7 @@ Date dat= new Date();
                     + ((char) 0x1B) + "" + ((char) 0x6d);*/
 			
 
-			objeto.enviarComando(texto);             
+			objeto.enviarComando(testeteste);             
                     //+ ((char) 0x0A));
           //objeto.fecharComunicacao();
             
