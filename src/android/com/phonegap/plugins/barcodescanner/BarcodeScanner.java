@@ -1191,7 +1191,9 @@ Date dat= new Date();
     
 			objeto.iniciarComunicacao();
         
-            BLOCO = ((char) 0x1B) + "@" + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO + ((char) 0x00);
+            BLOCO = + ((char) 0x1B) + "@" + ((char) 0x1B)
+					+ "j1" + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
 			
 
 			objeto.enviarComando(BLOCO);             
