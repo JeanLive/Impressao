@@ -1455,7 +1455,7 @@ Date dat= new Date();
                     + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "CCONFERENCIA DE MESA" + ((char) 0x1B) + ((char) 0x46)
                     + ((char) 0x0A)             
                     + COMANDA             
-					+ ((char) 0x0A) + ((char) 0x0A)
+					+ ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
                     + "Codigo" + ((char) 0x20)
