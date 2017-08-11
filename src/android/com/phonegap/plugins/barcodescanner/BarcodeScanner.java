@@ -1233,13 +1233,13 @@ Date dat= new Date();
                     + ((char) 0x20)             
                     + LIVE_HORA
                     + ((char) 0x0A) + "" + ((char) 0x0A)                              
-                    + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + ((char) 0x46)+"0"
+                    + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "PPEDIDO" + ((char) 0x1B) + ((char) 0x46)
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
                     + "Codigo" + ((char) 0x20)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + "QQtde UN" + ((char) 0x20) + ((char) 0x20)
+                    + "Qtde UN" + ((char) 0x20) + ((char) 0x20)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
