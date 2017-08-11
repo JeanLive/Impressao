@@ -1191,7 +1191,47 @@ Date dat= new Date();
     
 			objeto.iniciarComunicacao();
         
-            BLOCO = + ((char) 0x1B) + "@" + ((char) 0x1B)
+            texto = ((char) 0x1B)+"@"+((char) 0x1D)+((char) 0x68)+((char) 0x50)+			//Inicialização da Impressora com Configuração de altura do código de barras
+
+                            "------------------------------------------------\n" +
+
+                            ((char) 0x1B)+"a1"+((char) 0x1B)+"!"+((char) 0x01)+"PAULISTAO 2017/18 CLASSIFICACAO\n" +  "CAMPEONATO PAULISTA DE FUTEBOL\n" +((char) 0x1B)+"!"+((char) 0x00)+((char) 0x1B)+"a0"+				//Texto com fonte B e centralizado
+
+                            "------------------------------------------------\n" +
+
+                            ((char) 0x1B)+"a1"+((char) 0x1B)+"!"+((char) 0x10)+"PONTE PRETA x GUARANI\n"+((char) 0x1B)+"!"+((char) 0x00)+((char) 0x1B)+"a0"+ 			//Texto com Dupla altura e centralizado
+
+                            ((char) 0x1B)+"!"+((char) 0x80)+"ESTADIO BRINCO DE OURO DA PRINCESA\n"+((char) 0x1B)+"!"+((char) 0x00)+			//Texto sublinhado
+
+                            ((char) 0x1B)+"!"+((char) 0x20)+"05/03/2017 - 10:00:00\n"+((char) 0x1B)+"!"+((char) 0x00)+			//Texto com dupla largura
+
+                            ((char) 0x1B)+"!"+((char) 0x08)+"PORTAO 1 | ARQUIBANCADA\n"+((char) 0x1B)+"!"+((char) 0x00)+			//Texto em negrito
+
+                            ((char) 0x1B)+"a2"+((char) 0x1B)+"{1"+"Numero: 7703320 - R$ 0,00 - CORTESIA\n"+((char) 0x1B)+"{0"+((char) 0x1B)+"a0"+			//Texto de ponta cabeça alinhado a direita
+
+                            ((char) 0x1B)+"a1"+((char) 0x1D)+((char) 0x6B)+((char) 0x02)+"001239496030"+((char) 0x00)+((char) 0x1B)+"a0"+			//Código de barras centralizado
+
+                            ((char) 0x1B)+"a1"+((char) 0x1D)+"B1"+"\n\nIngresso valido somente com canhoto\n"+((char) 0x1D)+"B0"+((char) 0x1B)+"a0"+			//Texto com fundo preto centralizado
+
+                            ((char) 0x1B)+"a1"+((char) 0x1B)+((char) 0x20)+"5"+"BOM JOGO\n\n"+((char) 0x1B)+((char) 0x20)+"0"+((char) 0x1B)+"a0"+((char) 0x00)+//Texto com Espaçamento e centralizado
+
+                            ((char) 0x1B)+"@"+			//Inicializa a impressora
+
+                            ((char) 0x1B)+"a1"+         //Centraliza
+
+                            ((char) 0x1D)+((char) 0x28)+((char) 0x6B)+((char) 0x03)+((char) 0x00)+((char) 0x31)+((char) 0x43)+((char) 0x05)+			//Tamanho do Módulo do QrCode
+
+                            ((char) 0x1D)+((char) 0x28)+((char) 0x6B)+((char) 0x03)+((char) 0x00)+((char) 0x31)+((char) 0x45)+((char) 0x30)+			//Nível de correção do QrCode
+
+                            ((char) 0x1D)+((char) 0x28)+((char) 0x6B)+((char) 0x0B)+((char) 0x00)+((char) 0x31)+((char) 0x50)+((char) 0x30)+            //Armazena os dados do QrCode na área de impressão
+
+                            ((char) 0x4C)+((char) 0x45)+((char) 0x4F)+((char) 0x4E)+((char) 0x41)+((char) 0x52)+((char) 0x44)+((char) 0x4F)+			//texto qrcode em hexa
+
+                            ((char) 0x1D)+((char) 0x28)+((char) 0x6B)+((char) 0x03)+((char) 0x00)+((char) 0x31)+((char) 0x51)+((char) 0x30)+			//Imprime os dados na área de impressão
+
+                            ((char) 0x1B)+"a0"+"\n\n\n\n"+((char) 0x00);			//Descentraliza e Pula 4 linhas e Bit nulo;
+        
+            /*BLOCO = + ((char) 0x1B) + "@" + ((char) 0x1B)
 					+ "j1" + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
 					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46) +((char) 0x1B)+"a0"+((char) 0x00)
                     + ((char) 0x0A)
@@ -1228,7 +1268,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "NUMERO" + ((char) 0x3A) + NUM_CUPOM
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" *//*+ "NUMERO" + ((char) 0x3A) + NUM_CUPOM
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20)             
                     + LIVE_HORA
@@ -1237,10 +1277,10 @@ Date dat= new Date();
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "Codigo" + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "QQtde UN" + ((char) 0x20) + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) *//*+ "Codigo" + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) *//*+ "QQtde UN" + ((char) 0x20) + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
+                    /*+ ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
                     + "------------------------------------------------"
@@ -1260,30 +1300,30 @@ Date dat= new Date();
                     + "Acrescimo R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
                     + "                             " + LIVE_PAGAMENTO_ACRES             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" *//*+ "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x13) */+ VENDA_PAGAMENTO
+                    /*+ ((char) 0x13) *//*+ VENDA_PAGAMENTO
                     + ((char) 0x0A)             
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE: "
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" *//*+ "CLIENTE: "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B)+"a0" 
                     + ((char) 0x0A) + "" + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "OPERADOR:" + "" + USUARIO
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" *//*+ "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ COMANDA             
+                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" *//*+ COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     //+ ((char) 0x09)
-					/*+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" */+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+					/*+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" *//*+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6d);
+                    + ((char) 0x1B) + "" + ((char) 0x6d);*/
 			
 
-			objeto.enviarComando(BLOCO);             
+			objeto.enviarComando(texto);             
                     //+ ((char) 0x0A));
           //objeto.fecharComunicacao();
             
