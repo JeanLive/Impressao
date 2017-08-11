@@ -1249,7 +1249,7 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B)+"a2" + "Qtde. total de itens:"
+                    + ((char) 0x1B)+"a0" + "Qtde. total de itens:"
                     + "                        " + QUANTIDADE
                     + ((char) 0x0A)             
                     + "Valor total R$"            
@@ -1274,7 +1274,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B)+"a3" + "OPERADOR:" + "" + USUARIO
+                    + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
                     + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
