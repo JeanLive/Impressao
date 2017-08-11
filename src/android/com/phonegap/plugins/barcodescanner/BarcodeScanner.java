@@ -983,7 +983,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -991,10 +991,9 @@ Date dat= new Date();
 			objeto.iniciarComunicacao();
 			
 
-			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
-					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
-					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+			objeto.enviarComando(+ ((char) 0x1B) + "@"
                     + ((char) 0x0A)
+                    + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
                     + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
                     + ((char) 0x3A)             
@@ -1028,7 +1027,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NÚMERO"
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "NUMERO"
                     + ((char) 0x3A)
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + NUM_CUPOM             
                     + ((char) 0x13) + " " + ((char) 0x09) + "DATA"
@@ -1037,15 +1036,15 @@ Date dat= new Date();
                     + ((char) 0x20)             
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "PEDIDO CANCELADO" + ((char) 0x1B) + "" + ((char) 0x46)            
+                    + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "PPEDIDO CANCELADO" + ((char) 0x1B) + "" + ((char) 0x46)            
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + "Codigo" + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + "Qtde UN" + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)
@@ -1105,7 +1104,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1184,7 +1183,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                 //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=20)");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
                   //.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
