@@ -1451,7 +1451,7 @@ Date dat= new Date();
                     + ((char) 0x3A) + ((char) 0x20) + MESA             
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20) + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
-                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B) +"a1" + ((char) 0x1B) + ((char) 0x45) + "CCONFERENCIA DE MESA" + ((char) 0x1B) + ((char) 0x46)             
 					+ ((char) 0x0A) + ((char) 0x0A)
                     + "------------------------------------------------"
