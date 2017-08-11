@@ -403,7 +403,7 @@ public void live(JSONArray args){
                     + "" + ((char) 0x20) + "" + ((char) 0x20) 
                     + "" + LIVE_ITENS_UNIDADE + ((char) 0x20) + ((char) 0x20) 
                     + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL 
-                    + ((char) 0x0A)
+                    + ((char) 0x0A);
                     SEQ++;
                     };
                    
