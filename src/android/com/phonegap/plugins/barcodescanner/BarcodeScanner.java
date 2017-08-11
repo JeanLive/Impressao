@@ -395,8 +395,8 @@ public void live(JSONArray args){
                        
                     //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" + String.format("%03d", SEQ)    
                     VENDA_ITENS+= ((char) 0x1B)+"a0"+ LIVE_ITENS_PRODUTOID 
-                    + "" +((char) 0x20) +((char) 0x20) 
-                    + "" + LIVE_ITENS_DESCRICAO 
+                    +((char) 0x20) +((char) 0x20) 
+                    + LIVE_ITENS_DESCRICAO 
                     + ((char) 0x0A)
                     + ((char) 0x1B)+"a2" 
                     + "" + LIVE_ITENS_QUANTIDADE 
@@ -1249,7 +1249,7 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "Qtde. total de itens:"
+                    + ((char) 0x1B)+"a2" + "Qtde. total de itens:"
                     + "                        " + QUANTIDADE
                     + ((char) 0x0A)             
                     + "Valor total R$"            
@@ -1268,13 +1268,13 @@ Date dat= new Date();
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + "CLIENTE: "
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
+                    + ((char) 0x1B)+"a1" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B)+"a0" 
                     + ((char) 0x0A) + "" + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "OPERADOR:" + "" + USUARIO
+                    + ((char) 0x1B)+"a3" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
                     + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
