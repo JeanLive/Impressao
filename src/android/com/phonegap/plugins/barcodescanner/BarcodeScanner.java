@@ -1452,7 +1452,7 @@ Date dat= new Date();
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20) + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + ((char) 0x1B) + ((char) 0x45) + "CCONFERENCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
+                    + "CCONFERENCIA DE MESA"
 					+ ((char) 0x0A) + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
@@ -1470,21 +1470,20 @@ Date dat= new Date();
                     + ((char) 0x1B)+"a0" + "subtotal - R$:"          
                     + "                           " + TOTAL_ITENS
                     + ((char) 0x0A)
-                    + "Total por ocupante - R$:"
-                    + ((char) 0x3A)            
+                    + "Total por ocupante - R$:"          
                     + "                 " + OCUPANTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + "CLIENTE: "
                     + ((char) 0x1B)+"a1" + CLIENTE             
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + "NAO CONTEM VALOR FISCAL!" 
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
+                    + ((char) 0x0A) + ((char) 0x0A)             
                     + ((char) 0x1B) +"a1" + MENSAGEM     
                     + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
-                    + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
+					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46)
+                    + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A) + ((char) 0x0A)             
                     + ((char) 0x0A));
           //objeto.fecharComunicacao();
   
