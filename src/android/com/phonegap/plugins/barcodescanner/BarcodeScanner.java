@@ -1444,16 +1444,16 @@ Date dat= new Date();
                     + ((char) 0x12) + "FONE"
                     + ((char) 0x3A)             
                     + ((char) 0x12) + TELEFONE
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "MESA"
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x1B) + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x0A) + ((char) 0x0A)
+                    + "MESA"
                     + ((char) 0x3A) + ((char) 0x20) + MESA             
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20) + LIVE_HORA + ((char) 0x20) + ((char) 0x20)
-                    + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "CONFERENCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
-					+ ((char) 0x0A) + "" + ((char) 0x0A)
+                    + ((char) 0x0A) + ((char) 0x0A)             
+                    + ((char) 0x1B) + ((char) 0x45) + "CCONFERENCIA DE MESA" + ((char) 0x1B) + "" + ((char) 0x46)  
+					+ ((char) 0x0A) + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
                     + "Codigo" + ((char) 0x20)
@@ -1467,26 +1467,22 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)               
-                    + "subtotal - R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
-                    + ((char) 0x3A)            
-                    + "                            " + TOTAL_ITENS
+                    + ((char) 0x1B)+"a0" + "subtotal - R$:"          
+                    + "                           " + TOTAL_ITENS
                     + ((char) 0x0A)
-                    + "Total por ocupante - R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "Total por ocupante - R$:"
                     + ((char) 0x3A)            
-                    + "                  " + OCUPANTE             
+                    + "                 " + OCUPANTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "CLIENTE "
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
+                    + "CLIENTE: "
+                    + ((char) 0x1B)+"a1" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "NÃO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + ((char) 0x1B)+"a1" + "NAO CONTEM VALOR FISCAL!" 
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM             
+                    + ((char) 0x1B) +"a1" + MENSAGEM     
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
-                    + ((char) 0x3A)             
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x09)
 					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x0A));
