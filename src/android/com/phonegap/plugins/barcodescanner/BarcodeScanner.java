@@ -1192,8 +1192,8 @@ Date dat= new Date();
     
 			objeto.iniciarComunicacao();
         
-            BLOCO = + ((char) 0x1B) + "@" + ((char) 0x1B)
-					+ "j1" + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
+            BLOCO = + ((char) 0x1B) + "@" 
+                    + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
                     + ((char) 0x0A)
                     + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
