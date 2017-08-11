@@ -1193,7 +1193,7 @@ Date dat= new Date();
         
             BLOCO = + ((char) 0x1B) + "@" + ((char) 0x1B)
 					+ "j1" + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
-					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46) +((char) 0x1B)+"a0"+((char) 0x00)
+					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A)
                     + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
@@ -1228,7 +1228,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "------------------------------------------------" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "NUMERO" + ((char) 0x3A) + NUM_CUPOM
+                    + "NUMERO" + ((char) 0x3A) + NUM_CUPOM
                     + ((char) 0x20) + ((char) 0x20) + "DATA" + ((char) 0x3A) + LIVE_DATA
                     + ((char) 0x20)             
                     + LIVE_HORA
@@ -1237,9 +1237,9 @@ Date dat= new Date();
 					+ ((char) 0x0A) + "" + ((char) 0x0A)
                     + "------------------------------------------------"
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "Codigo" + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
+                    + "Codigo" + ((char) 0x20)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    /*+ ((char) 0x1B) + "" + ((char) 0x45) */+ "QQtde UN" + ((char) 0x20) + ((char) 0x20)/* + ((char) 0x1B) + "" + ((char) 0x46)*/
+                    + "QQtde UN" + ((char) 0x20) + ((char) 0x20)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
@@ -1248,37 +1248,36 @@ Date dat= new Date();
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "Qtde. total de itens:"//+ ((char) 0x1B) + "" + ((char) 0x6A) + "0"
+                    + "Qtde. total de itens:"
                     + "                        " + QUANTIDADE
                     + ((char) 0x0A)             
-                    + "Valor total R$" //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Valor total R$"            
                     + "                           " + LIVE_TOTAL_ITENS
                     + ((char) 0x0A)            
-                    + "Desconto R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Desconto R$"          
                     + "                              " + LIVE_PAGAMENTO_DESC
                     + ((char) 0x0A)
-                    + "Acrescimo R$"// + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
+                    + "Acrescimo R$"          
                     + "                             " + LIVE_PAGAMENTO_ACRES             
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "FORMA DE PAGAMENTO                 VALOR PAGO R$"
+                    + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x13) */+ VENDA_PAGAMENTO
+                    + VENDA_PAGAMENTO
                     + ((char) 0x0A)             
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" */+ "CLIENTE: "
+                    + "CLIENTE: "
                     + ((char) 0x12) + "" + ((char) 0x0B) + "" + CLIENTE             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)               
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + "" + ((char) 0x45) + "NNAO CONTEM VALOR FISCAL!" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B)+"a0" 
                     + ((char) 0x0A) + "" + ((char) 0x0A)            
                     + ((char) 0x1B) +"a1" + MENSAGEM + ((char) 0x1B)+"a0"            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ "OPERADOR:" + "" + USUARIO
+                    + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
-                    /*+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" */+ COMANDA             
+                    + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    //+ ((char) 0x09)
-					/*+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" */+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x1B)+"a1"+  ((char) 0x1B) + "" + ((char) 0x45) + "wwww.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d);
 			
