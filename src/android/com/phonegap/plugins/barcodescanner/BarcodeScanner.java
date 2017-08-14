@@ -306,7 +306,7 @@ public class BarcodeScanner extends CordovaPlugin {
 	}
 	//Monta o comando de impressao do Qrcode adicionando os bytes [ESC]<129> no inicio
 	//Comando de qrcode de impressora: [ESC] <129> <–Size><+Size> <Width> <Ecc> <D001> <D002> . . . <Dnnn>
-	qrcode=+((char)0x1B) +" "+((char)0x81)+bLSB[0]+bMSB[0]+modulo[0]+correcao[0]+dados;
+	qrcode=+((char)0x1B) +""+((char)0x81)+bLSB[0]+bMSB[0]+modulo[0]+correcao[0]+dados;
 	return qrcode;
 	
 	}	
