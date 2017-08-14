@@ -1352,7 +1352,7 @@ Date dat= new Date();
                     + "                          " + LIVE_TOTAL_ITENS
                     + ((char) 0x0A)             
                     + ACRES_DESC             
-                    + ((char) 0x1B)+"a0" ((char) 0x1B)+"!"+((char) 0x08) + "Valor a Pagar R$                         " + VLR_RECEBER +((char) 0x1B)+"!"+ 
+                    + ((char) 0x1B)+"a0" + ((char) 0x1B)+"!"+((char) 0x08) + "Valor a Pagar R$                         " + VLR_RECEBER + ((char) 0x1B)+"!"+ 
                     + ((char) 0x0A)
                     + ((char) 0x1B)+"a0" + "FORMA DE PAGAMENTO                 VALOR PAGO R$"
                     + ((char) 0x0A)             
@@ -1360,7 +1360,7 @@ Date dat= new Date();
                     + ((char) 0x0A)
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + ((char) 0x1B)+"a1" ((char) 0x1B)+"!"+((char) 0x08) + "Consulte pela Chave de Acesso em" + ((char) 0x1B)+"!"
+                    + ((char) 0x1B)+"a1" + ((char) 0x1B)+"!"+((char) 0x08) + "Consulte pela Chave de Acesso em" + ((char) 0x1B)+"!"
                     + ((char) 0x0A)             
                     + ((char) 0x1B)+"a1" + URL_CONSULTA
                     + ((char) 0x0A)             
@@ -1368,7 +1368,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + ((char) 0x45) + CONSUMIDOR + "" + ((char) 0x1B) + "" + ((char) 0x46) + CLIENTE
                     + ((char) 0x0A) + ((char) 0x0A)
-                    ((char) 0x1B)+"!"+((char) 0x08) + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
+                    + ((char) 0x1B)+"!"+((char) 0x08) + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Protocolo de autorizacao:" + ((char) 0x1B) + "" + ((char) 0x46) +  PROTOCOLO + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Data da autorizacao" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x20) + DATA_HORA_AUTORIZACAO + ((char) 0x1B)+"!"
                     + ((char) 0x0A) + ((char) 0x0A)
