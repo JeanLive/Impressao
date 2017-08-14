@@ -1374,8 +1374,8 @@ Date dat= new Date();
                     + ((char) 0x1B)+"a1" + "Protocolo de autorizacao:" +  PROTOCOLO   
                     + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + "Data da autorizacao: " + DATA_HORA_AUTORIZACAO
-                    + ((char) 0x0A) + ((char) 0x0A)
-                    + ((char) 0x1B)+"a1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
+                    //+ ((char) 0x0A) + ((char) 0x0A)
+                    //+ ((char) 0x1B)+"a1" + "EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR   FISCAL"
                     + ((char) 0x0A) + ((char) 0x0A)             
                     + montarQrCode(LIVE_QRCODE, "H", "4")            
                     + ((char) 0x0A)             
