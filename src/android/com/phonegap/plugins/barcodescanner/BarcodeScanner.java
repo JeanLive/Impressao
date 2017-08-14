@@ -306,7 +306,7 @@ public class BarcodeScanner extends CordovaPlugin {
 	}
 	//Monta o comando de impressao do Qrcode adicionando os bytes [ESC]<129> no inicio
 	//Comando de qrcode de impressora: [ESC] <129> <–Size><+Size> <Width> <Ecc> <D001> <D002> . . . <Dnnn>
-	qrcode=""+((char)0x1B) +""+((char)0x81)+bLSB[0]+bMSB[0]+modulo[0]+correcao[0]+dados;
+	qrcode=+((char)0x1B) +" "+((char)0x81)+bLSB[0]+bMSB[0]+modulo[0]+correcao[0]+dados;
 	return qrcode;
 	
 	}	
@@ -1333,7 +1333,8 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + "------------------------------------------------" 
                     + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Documento Auxiliar da Nota Fiscal de Consumidor Eletronica" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)           
+                    + ((char) 0x1B)+"a1" + "Documento Auxiliar da Nota Fiscal de Consumidor Eletronica"
+                    + ((char) 0x0A)           
                     + "------------------------------------------------"            
                     + ((char) 0x0A)             
                     + "Codigo" + ((char) 0x20)
@@ -1360,7 +1361,7 @@ Date dat= new Date();
                     + ((char) 0x0A)
                     + ((char) 0x13) + "TROCO R$" + "                                 " + LIVE_PAGAMENTO_TROCO   
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + ((char) 0x1B)+"a1" + "Consulte pela Chave de Acesso em"
+                    + ((char) 0x1B)+"a1" + "Consulte pela Chave de Acesso em:"
                     + ((char) 0x0A)             
                     + ((char) 0x1B)+"a1" + URL_CONSULTA
                     + ((char) 0x0A)             
@@ -1370,13 +1371,14 @@ Date dat= new Date();
                     + ((char) 0x0A) + ((char) 0x0A)
                     + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) 
                     + ((char) 0x0A)
-                    + ((char) 0x1B) + ((char) 0x45) + "Protocolo de autorizacao:" + ((char) 0x1B) + ((char) 0x46) +  PROTOCOLO   
+                    "Protocolo de autorizacao:" +  PROTOCOLO   
                     + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Data da autorizacao" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x20) + DATA_HORA_AUTORIZACAO
+                    + "Data da autorizacao: " + DATA_HORA_AUTORIZACAO
                     + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + montarQrCode(LIVE_QRCODE, "H", "4")
+                    //+ montarQrCode(LIVE_QRCODE, "H", "4")
+                    + montarQrCode(LIVE_QRCODE, "H")             
                     + ((char) 0x0A)             
                     + ((char) 0x1B) +"a1" + MENSAGEM            
                     + ((char) 0x0A)
