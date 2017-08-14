@@ -1296,18 +1296,18 @@ Date dat= new Date();
 			objeto.iniciarComunicacao();
 			
 
-			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
-					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + ((char) 0x07)
-                    + ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+			objeto.enviarComando(+ ((char) 0x1B) + "@"
+                    + ((char) 0x0A)
+                    + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + ((char) 0x13) + "CNPJ" + ((char) 0x1B) + "" + ((char) 0x6A) + "1"             
+                    + ((char) 0x13) + "CNPJ"            
                     + ((char) 0x3A)
                     + ((char) 0x13) + CNPJ + ((char) 0x20)
-                    + ((char) 0x13) + "IE" + ((char) 0x1B) + "" + ((char) 0x6A) + "1"             
+                    + ((char) 0x13) + "IE"            
                     + ((char) 0x3A)
                     + ((char) 0x13) + INSCR_ESTADUAL
                     + ((char) 0x0A)             
-					+ ((char) 0x0E) + "" + ((char) 0x14) + ((char) 0x1B) + "" + ((char) 0x45) + LIVE_RAZAO_SOCIAL + ((char) 0x1B) + "" + ((char) 0x46)              
+					+ ((char) 0x0E) + "" + ((char) 0x14) + ((char) 0x1B) + ((char) 0x45) + LIVE_RAZAO_SOCIAL + ((char) 0x1B) + ((char) 0x46)
                     + ((char) 0x0A)
                     + ((char) 0x12) + LOGRADOURO
                     + ((char) 0x2C)
@@ -1333,23 +1333,23 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + "------------------------------------------------" 
                     + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Documento Auxiliar da Nota Fiscal de Consumidor Eletrônica" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)           
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "Documento Auxiliar da Nota Fiscal de Consumidor Eletronica" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)           
                     + "------------------------------------------------"            
-                    + ((char) 0x0A)            
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Código" + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Descrição" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Qtde UN" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
-                    + ((char) 0x1B) + "" + ((char) 0x45) + "Vl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + ((char) 0x0A)             
+                    + "Codigo" + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "DDescricao" + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)          
+                    + "Qtde UN" + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Unit" + ((char) 0x20) + ((char) 0x20) + ((char) 0x1B) + "" + ((char) 0x46)
+                    + ((char) 0x1B) + "" + ((char) 0x45) + "VVl Total" + ((char) 0x1B) + "" + ((char) 0x46)          
                     + ((char) 0x0A)
                     + ((char) 0x12) + VENDA_ITENS             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)            
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + "Qtde. total de itens" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"
-                    + "                        " + QUANTIDADE             
+                    + ((char) 0x1B)+"a0" + "Qtde. total de itens:"
+                    + "                       " + QUANTIDADE             
                     + ((char) 0x0A)             
-                    + "Valor total R$" + ((char) 0x1B) + "" + ((char) 0x6A) + "0"            
-                    + "                           " + LIVE_TOTAL_ITENS
+                    + "Valor total R$:"            
+                    + "                          " + LIVE_TOTAL_ITENS
                     + ((char) 0x0A)             
                     + ACRES_DESC             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Valor a Pagar R$                         " + VLR_RECEBER + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  
@@ -1375,18 +1375,15 @@ Date dat= new Date();
                     + ((char) 0x0A) + ((char) 0x0A)             
                     + montarQrCode(LIVE_QRCODE, "H", "4")
                     + ((char) 0x0A)             
-                    + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
+                    + ((char) 0x1B) +"a1" + MENSAGEM            
                     + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "Tributos Totais Incidentes (Lei Federal 12.741/2012) R$: " + LIVE_TOTAL_TRIBUTOS
+                    + ((char) 0x1B) +"a1" + "Tributos Totais Incidentes (Lei Federal 12.741/2012) R$: " + LIVE_TOTAL_TRIBUTOS
                     + ((char) 0x0A) + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Operador"
-                    + ((char) 0x3A)             
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + COMANDA             
+                    + COMANDA             
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x09)
-					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+                    + ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)             
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
