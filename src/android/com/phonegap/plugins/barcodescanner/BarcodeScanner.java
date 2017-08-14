@@ -1369,11 +1369,11 @@ Date dat= new Date();
                     + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + ((char) 0x1B) + ((char) 0x45) + CONSUMIDOR + "" + ((char) 0x1B) + "" + ((char) 0x46) + CLIENTE
                     + ((char) 0x0A) + ((char) 0x0A)
-                    + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) 
+                    + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA 
                     + ((char) 0x0A)
-                    "Protocolo de autorizacao:" +  PROTOCOLO   
+                    + ((char) 0x1B)+"a1" + "Protocolo de autorizacao:" +  PROTOCOLO   
                     + ((char) 0x0A)
-                    + "Data da autorizacao: " + DATA_HORA_AUTORIZACAO
+                    + ((char) 0x1B)+"a1" + "Data da autorizacao: " + DATA_HORA_AUTORIZACAO
                     + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x1B)+"a1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
                     + ((char) 0x0A) + ((char) 0x0A)             
