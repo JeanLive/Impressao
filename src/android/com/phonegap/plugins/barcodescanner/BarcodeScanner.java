@@ -879,8 +879,8 @@ Date dat= new Date();
                     + ((char) 0x1B) + "" + ((char) 0x45) + "NFC-e nº " + NUM_CUPOM + ((char) 0x20) + "Serie " + SERIE + ((char) 0x20) + LIVE_DATA + ((char) 0x20) + LIVE_HORA + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Protocolo de autorização:" + ((char) 0x1B) + "" + ((char) 0x46) +  PROTOCOLO + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x45) + "Data da autorização" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x20) + DATA_HORA_AUTORIZACAO + ((char) 0x1B) + "" + ((char) 0x6A) + "1"  + ((char) 0x0A) + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
-                    + ((char) 0x0A) + ((char) 0x0A)             
+                    //+ ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR   FISCAL"
+                    //+ ((char) 0x0A) + ((char) 0x0A)             
                     + montarQrCode(LIVE_QRCODE, "H", "4")
                     + ((char) 0x0A)             
                     + ((char) 0x0E) + "" + ((char) 0x14) + MENSAGEM            
