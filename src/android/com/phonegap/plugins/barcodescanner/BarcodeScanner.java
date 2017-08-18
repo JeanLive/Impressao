@@ -1132,11 +1132,10 @@ Date dat= new Date();
 			objeto.iniciarComunicacao();
 			
 
-			objeto.enviarComando("" + ((char) 0x1B) + "@" + ((char) 0x1B)
-					+ "j1" + ((char) 0x1B) + "" + ((char) 0x45) + "" + ((char) 0x07)
-					+ ((char) 0x0E) + "" + ((char) 0x14) + EMPRESA_DESCRICAO + ((char) 0x1B) + "" + ((char) 0x46)
+			objeto.enviarComando(+ ((char) 0x1B) + "@"
                     + ((char) 0x0A)
-                    + ((char) 0x0A)
+                    + ((char) 0x1B)+"a1" + EMPRESA_DESCRICAO
+                    + ((char) 0x0A) + ((char) 0x0A)
                     + ((char) 0x13) + "CNPJ"             
                     + ((char) 0x3A)             
                     + ((char) 0x13) + CNPJ
@@ -1169,25 +1168,23 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "________________________________________________" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + "MESA:" + MESA + ((char) 0x20) + ((char) 0x20)
+                    + ((char) 0x1B)+"a1" + "MESA:" + MESA + ((char) 0x20) + ((char) 0x20)
                     + "DATA: " + LIVE_DATA + ((char) 0x20) + LIVE_HORA
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "1" + ((char) 0x1B) + "" + ((char) 0x45) + "COMANDA: " + PRODUTO_ID + ((char) 0x1B) + "" + ((char) 0x46)               
+                    + ((char) 0x1B)+"a1" + "COMANDA: " + PRODUTO_ID               
 					+ ((char) 0x0A) + "" + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "DESCRIÇÃO: " + LIVE_ITENS_DESCRICAO            
+                    + ((char) 0x1B)+"a0" + "DESCRICAO: " + LIVE_ITENS_DESCRICAO            
                     + ((char) 0x0A)             
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OBSERVAÇÃO: " + LIVE_OBSERVACAO                         
+                    + ((char) 0x1B)+"a0" + "OBSERVACAO: " + LIVE_OBSERVACAO                         
                     + ((char) 0x0A) + "" + ((char) 0x0A)
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "QUANTIDADE: " + LIVE_ITENS_QUANTIDADE
+                    + ((char) 0x1B)+"a0" + "QUANTIDADE: " + LIVE_ITENS_QUANTIDADE
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x1B) + "" + ((char) 0x45) + "================================================" + ((char) 0x1B) + "" + ((char) 0x46)
                     + ((char) 0x0A) + "" + ((char) 0x0A)                         
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "0" + "OPERADOR"
-                    + ((char) 0x3A)             
-                    + ((char) 0x12) + "" + ((char) 0x0B) + "" + USUARIO
+                    + ((char) 0x1B)+"a0" + "OPERADOR:" + "" + USUARIO
                     + ((char) 0x0A) + "" + ((char) 0x0A)             
                     + ((char) 0x09)
-					+ ((char) 0x1B) + "" + ((char) 0x6A) + "2" + ((char) 0x1B) + "" + ((char) 0x45) + "www.livesistemas.com" + "" + ((char) 0x1B) + "" + ((char) 0x46) + ((char) 0x0A)             
+					+ ((char) 0x1B)+"a1"+  ((char) 0x1B) + ((char) 0x45) + "wwww.livesistemas.com" + ((char) 0x1B) + ((char) 0x46) + ((char) 0x0A)
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
