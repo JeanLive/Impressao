@@ -372,31 +372,7 @@ public void live(JSONArray args){
                     }else{
                     COMANDA="";    
                     }
-                    
-                    if(IMPRESSAO_TIPO.equals("Rede")){
-                    VENDA_ITENS_REDE=((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_ITENS_PRODUTOID 
-                    + "" +((char) 0x20) +((char) 0x20) 
-                    + "" + LIVE_ITENS_DESCRICAO 
-                    + ((char) 0x0A) 
-                    + ((char) 0x1B) + "" + ((char) 0x6A) + "2" 
-                    + "" + LIVE_ITENS_QUANTIDADE 
-                    + "" + ((char) 0x20) + "" + ((char) 0x20) 
-                    + "" + LIVE_ITENS_UNIDADE + ((char) 0x20) + ((char) 0x20) 
-                    + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL + ((char) 0x0A); 
-                        
-                    }else{
-                        VENDA_ITENS_REDE=((char) 0x1B)+"a0"+ LIVE_ITENS_PRODUTOID 
-                    +((char) 0x20) +((char) 0x20) 
-                    + LIVE_ITENS_DESCRICAO 
-                    + ((char) 0x0A)
-                    + ((char) 0x1B)+"a2" 
-                    + "" + LIVE_ITENS_QUANTIDADE 
-                    + "" + ((char) 0x20) + "" + ((char) 0x20) 
-                    + "" + LIVE_ITENS_UNIDADE + ((char) 0x20) + ((char) 0x20) 
-                    + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL 
-                    + ((char) 0x0A);
-                    }
-                    
+                                      
                     itens = object.getJSONObject(i).getJSONArray("itens");
                     moeda = object.getJSONObject(i).getJSONArray("pagamentos");
                     int SEQ=1;
@@ -417,9 +393,20 @@ public void live(JSONArray args){
                     OCUPANTE = itens.getJSONObject(y).getString("vlr_ocupante").toString();
                     QUANTIDADE = itens.getJSONObject(y).getString("quan_itens").toString();
                     LIVE_OBSERVACAO = itens.getJSONObject(y).getString("live_observacao").toString();    
-                       
+                    
+                    if(IMPRESSAO_TIPO.equals("Rede")){    
                     //+ ((char) 0x1B) + "" + ((char) 0x6A) + "0" + String.format("%03d", SEQ)    
-                    VENDA_ITENS+=VENDA_ITENS_REDE;
+                    VENDA_ITENS+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_ITENS_PRODUTOID 
+                    + "" +((char) 0x20) +((char) 0x20) 
+                    + "" + LIVE_ITENS_DESCRICAO 
+                    + ((char) 0x0A) 
+                    + ((char) 0x1B) + "" + ((char) 0x6A) + "2" 
+                    + "" + LIVE_ITENS_QUANTIDADE 
+                    + "" + ((char) 0x20) + "" + ((char) 0x20) 
+                    + "" + LIVE_ITENS_UNIDADE + ((char) 0x20) + ((char) 0x20) 
+                    + "" + LIVE_ITENS_VLR_UNIT + ((char) 0x20) + ((char) 0x20) + "   " + LIVE_ITENS_VLR_TOTAL + ((char) 0x0A);
+                        
+                    }
                     SEQ++;
                     };
                    
