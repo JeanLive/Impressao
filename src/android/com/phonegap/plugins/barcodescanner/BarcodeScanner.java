@@ -434,8 +434,15 @@ public void live(JSONArray args){
                     VLR_RECEBER = moeda.getJSONObject(x).getString("vlr_apagar").toString();    
                     LIVE_PAGAMENTO_TROCO = moeda.getJSONObject(x).getString("pag_troco").toString();
                       
-                   VENDA_PAGAMENTO+= ((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_PAGAMENTO_MOEDA +"                         "+ LIVE_PAGAMENTO_RECEBIDO
+                    
+                    if(IMPRESSAO_TIPO.equals("Rede")){    
+                    VENDA_PAGAMENTO+= ((char) 0x1B) + "" + ((char) 0x6A) + "0" + LIVE_PAGAMENTO_MOEDA +"                         "+ LIVE_PAGAMENTO_RECEBIDO
                     + ((char) 0x0A);
+                        
+                    }else{
+                    VENDA_PAGAMENTO+= ((char) 0x1B)+"a0"+ LIVE_PAGAMENTO_MOEDA +"                         "+ LIVE_PAGAMENTO_RECEBIDO
+                    + ((char) 0x0A);
+                    }
                                     
                     };
                     ACRES_DESC="";
