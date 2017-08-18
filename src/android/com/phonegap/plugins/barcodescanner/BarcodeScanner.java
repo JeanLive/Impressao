@@ -367,7 +367,7 @@ public void live(JSONArray args){
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
                         
-                    COMANDA+=((char) 0x1B)+"a0"+ "Comanda: " + PRODUTO_ID + ((char) 0x0A);
+                    COMANDA+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Comanda: " + PRODUTO_ID + ((char) 0x0A);
                     }else{
                     COMANDA="";    
                     }
@@ -755,7 +755,7 @@ Date dat= new Date();
                     + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A) + "" + ((char) 0x0A)
                     + ((char) 0x1B) + "" + ((char) 0x6d));             
                     //+ ((char) 0x0A));
-          //objeto.fecharComunicacao();
+          objeto.fecharComunicacao();
             
         }
     
