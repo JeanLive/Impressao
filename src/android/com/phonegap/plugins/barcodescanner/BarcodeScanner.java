@@ -364,11 +364,19 @@ public void live(JSONArray args){
                     IMPRESSAO_TIPO = object.getJSONObject(i).getString("live_tipo_impressao").toString();
                     IP = object.getJSONObject(i).getString("impressora_ip").toString();
                     PORTA = object.getJSONObject(i).getString("impressora_porta").toString();
-                     
+                    
+                    
+                    
                     COMANDA="";
                     if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
                         
+                    if(IMPRESSAO_TIPO.equals("Rede")){    
                     COMANDA+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Comanda: " + PRODUTO_ID + ((char) 0x0A);
+                    }else{
+                    COMANDA+=((char) 0x1B)+"a0"+ "Comanda: " + PRODUTO_ID + ((char) 0x0A);
+                    }
+                        
+                        
                     }else{
                     COMANDA="";    
                     }
