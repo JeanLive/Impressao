@@ -1012,7 +1012,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=2000)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1124,7 +1124,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=2000)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1199,7 +1199,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                 //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=2000)");
                   //.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
@@ -1313,7 +1313,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                 //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
+            .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=2000)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
@@ -1429,7 +1429,7 @@ Date dat= new Date();
     	DarumaMobile objeto = DarumaMobile
 				//.inicializar("@SOCKET(HOST="+ IP +";PORT=" +PORTA +")");
                     //.inicializar("@BLUETOOTH(ADDRESS="+ IP +")");
-                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=30)");
+                    .inicializar("@BLUETOOTH(ADDRESS="+IP+";TIMEOUT=2000)");
 		objeto.confParametros("@FRAMEWORK(TRATAEXCECAO=TRUE)");
 		//TextView versao = (TextView) findViewById(R.id.textView1);
 		//versao.setText(String.valueOf(obj.retornaVersao()));
