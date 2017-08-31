@@ -368,7 +368,7 @@ public void live(JSONArray args){
                     
                     
                     COMANDA="";
-                    if(LIVE_ESTABELECIMENTO.equals("Restaurante")){
+                    /*if(LIVE_ESTABELECIMENTO.equals("Restaurante")){*/
                         
                     if(IMPRESSAO_TIPO.equals("Rede")){    
                     COMANDA+=((char) 0x1B) + "" + ((char) 0x6A) + "0" + "Comanda: " + PRODUTO_ID + ((char) 0x0A);
@@ -377,9 +377,9 @@ public void live(JSONArray args){
                     }
                         
                         
-                    }else{
+                    /*}else{
                     COMANDA="";    
-                    }
+                    }*/
                                       
                     itens = object.getJSONObject(i).getJSONArray("itens");
                     moeda = object.getJSONObject(i).getJSONArray("pagamentos");
